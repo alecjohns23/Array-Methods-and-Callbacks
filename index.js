@@ -4,6 +4,14 @@ console.log(fifaData);
 
 // ⚽️ M  V P ⚽️ //
 
+
+
+
+
+
+
+
+
 /* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data 
 
 (a) Home Team name for 2014 world cup final
@@ -12,14 +20,14 @@ console.log(fifaData);
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
-
+let final = fifaData.find(game=> game.Stage === "Final" && game.Year === 2014);
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(/* code here */) {
+function getFinals(data) {
+return data.filter(game=> game.Stage === "Final");
+    }
 
-    /* code here */
-
-};
+    getFinals(fifaData);
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
@@ -76,6 +84,28 @@ function getAverageGoals(/* code here */) {
 };
 
 getAverageGoals();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /// STRETCH 🥅 //
